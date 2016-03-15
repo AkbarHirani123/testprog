@@ -15,14 +15,10 @@ public class App
     {
     	ApplicationContext context = new ClassPathXmlApplicationContext("com/caveofprogramming/spring/test/testprog/beans/beans.xml	");
     	
-        Person person = (Person)context.getBean("person");
-        person.speak();
-        
-        Address address = (Address)context.getBean("address");
-        
-        System.out.println(person);
-        System.out.println(address);
-        
+    	FruitBasket basket = (FruitBasket)context.getBean("basket");
+    	
+    	System.out.println(basket);
+    	
         ((ClassPathXmlApplicationContext) context).close();
     }
 }
